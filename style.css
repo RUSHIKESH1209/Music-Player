@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+/* Width, height, and background */
+::-webkit-scrollbar {
+    border-radius: 5px;
+    width: 12px;
+    height: 12px;
+    background-color: #ffe0e5; /* Background color of the scrollbar */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 5px;
+
+    background-color: #fff; /* Color of the track (the area behind the scrollbar) */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background-color: #f53192; /* Color of the scrollbar handle */
+    border-radius: 6px; /* Rounded corners */
+    border: 3px solid #fff; /* Border around the scrollbar handle */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #f05b9d; /* Darker color when the scrollbar handle is hovered */
+  }
+  
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.musicplayer {
+    background-color: #ffe0e5;
+    width: 400px;
+    height: 620px;
+    padding: 25px 35px;
+    text-align: center;
+}
+
+.musicplayernav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+
+
+nav .circle {
+    border-radius: 50%;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #f53192;
+    box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+}
+
+.songimg {
+    width: 220px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 10px 60px rgba(255, 26, 26, 0.42);
+}
+
+.musicplayer h1 {
+    padding: 5px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
+.musicplayer p {
+    font-size: 14px;
+    color: #333;
+
+}
+
+#progress {
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background-color: #f53192;
+    border-radius: 4px;
+    margin: 20px 0px;
+}
+
+
+#progress::-webkit-slider-thumb {
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background-color: #f53192;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    box-shadow: 0 0px 10px rgba(255, 26, 26, 2);
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.buttons div {
+    height: 60px;
+    width: 60px;
+    margin: 20px;
+    background-color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #f53192;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
+
+}
+
+.buttons :nth-child(2) {
+    transform: scale(1.5);
+    background-color: #f53192;
+    color: #fff;
+}
+
+.buttons div i{
+    cursor: pointer;
+}
+
+.time {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.displaynone {
+    display: none;
+}
+
+.playlist {
+    background-color: #ffe0e5;
+    width: 400px;
+    height: 620px;
+    padding: 25px 35px;
+    text-align: center;
+}
+
+.playlistnav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+
+.pcircle{
+    cursor: pointer;
+    border-radius: 50%;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    background-color: #fff;
+    color: #f53192;
+    box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+}
+
+.playlistbars{
+    box-shadow: 0 1px 30px rgb(255, 255, 255);
+    border: 1px solid #ffadd6;
+    overflow: auto;
+    height: 500px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+}
+
+.playlistbar{
+    box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
+    margin: 10px 0px;
+    border-radius: 10px;
+    border:1px solid white ; 
+    width: 100%;
+    background-color:  #ffe0e5;
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows: 25px 25px;
+}
+
+.playlistbar:hover{
+    box-shadow: 0 1px 10px rgba(255, 26, 26, 0.82);
+
+}
+
+.playlistbarname{
+    color: #3c3c3c;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: start;
+    padding: 5px 5px;
+    width: 100%;
+    background-color: #ffe0e5;;
+}
+
+.playlistbarartist{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #6b6b6b;
+    font-size: small;
+    text-align: start;
+    padding: 5px 5px;
+    border-radius: 10px;
+    width: 100%;
+    white-space: nowrap;
+    background-color: #ffe0e5;;
+}
+
+.playlistimg{
+    grid-row: 1/3;
+    border-radius: 10px;
+    margin: 5px;
+    background-size: cover;
+
+}
