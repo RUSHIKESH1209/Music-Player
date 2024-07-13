@@ -311,3 +311,47 @@ document.addEventListener('keydown', function (e) {
 console.log(volumerange.value)
 
 console.log(  currentsong.volume )
+
+// Login/Signup Modal
+const modal = document.getElementById("loginSignupModal");
+const loginBtn = document.querySelector(".loginlogo");
+const closeBtn = document.querySelector(".close-button");
+
+// Open the modal
+loginBtn.addEventListener("click", () => {
+    modal.style.display = "block";
+});
+
+// Close the modal
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+// Close the modal when clicking outside of it
+window.addEventListener("click", (event) => {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+});
+
+// Handle login form submission
+document.getElementById("loginForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    // Handle login logic here
+    console.log(`Login attempted with username: ${username} and password: ${password}`);
+    // Close the modal after login
+    modal.style.display = "none";
+});
+
+// Handle signup form submission
+document.getElementById("signupForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const newUsername = document.getElementById("newUsername").value;
+    const newPassword = document.getElementById("newPassword").value;
+    // Handle signup logic here
+    console.log(`Signup attempted with username: ${newUsername} and password: ${newPassword}`);
+    // Close the modal after signup
+    modal.style.display = "none";
+});
