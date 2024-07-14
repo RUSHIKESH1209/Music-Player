@@ -402,3 +402,32 @@ nav .circle ,.volume .circle{
     cursor: pointer;
 }
 
+/* Add this to your existing CSS file */
+.voice-assistant {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+    margin-left: 0.5em;
+    font-size: 1.2em;
+}
+
+.voice-assistant i {
+    color: #333; /* Adjust color as needed */
+}
+
+.voice-assistant:hover i {
+    color: #666; /* Adjust color as needed */
+}
+
+/* Ensure the search bar and voice assistant button are aligned */
+.pcircle {
+    display: flex;
+    align-items: center;
+}
+
+.searchbar {
+    flex-grow: 1;
+    padding: 0.5em;
+}
+
